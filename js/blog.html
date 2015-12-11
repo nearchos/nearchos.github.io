@@ -1,0 +1,122 @@
+In <a href="http://computer-science-is-fun.blogspot.com/2013/08/circling-square-or-how-to-draw-cool-3-d.html" target="_blank">Circling the square - Part 1</a>, I explained the motivation for this series of posts and introduced how you can draw lines using Javascript and HTML5. In this post, I show how you can create simple animations.<br />
+<br />
+Animation is essentially&nbsp;<span style="background-color: white;">“</span><i>an illusion of motion, by means of rapid display of a sequence of static images</i><span style="background-color: white;">”</span>&nbsp;(see <a href="http://en.wikipedia.org/wiki/Animation" target="_blank">Wikipedia</a>). So, to create a simple animation it is sufficient to quickly <i>draw</i>&nbsp;a sequence of images.<br />
+<br />
+To simplify our work, we use the <a href="http://processingjs.org/" target="_blank">Processing JavaScript</a>&nbsp;(Processing.js) framework. There is no need to go in more detail here, besides explaining that this framework is based purely on JavaScript (obviously) and to produce an animation you simply need to define two functions:<br />
+<ul>
+<li>setup(), and</li>
+<li>draw().</li>
+</ul>
+<div>
+The setup() is used to define the code that initializes your animation (i.e. initializing variables etc.) and the draw is called <i>repetitively</i> to update the drawing (and thus create the illusion of animation).</div>
+<div class="separator" style="clear: both; text-align: center;">
+<br /></div>
+For example, see the following simple Processing.js code and the animation it produces (canvas border is blue, sized 200 pixels wide and 300 pixels high):<br />
+<br />
+<div style="display: inline-block;">
+<a href="http://nearchos.aspectsense.com/js/falling_ball.html" target="_blank">
+<img align="left" border="1" src="http://3.bp.blogspot.com/-xqdHouN9jWo/U4Yhf_2HhqI/AAAAAAAAuEo/SwjJgCM8-EE/s1600/bouncing_ball.gif" style="border-color: blue;" />
+</a>
+
+<br />
+<div style="border: 1px dashed #bbb; height: 500px; margin-left: 220px; padding: 10px; width: 400px;">
+<pre>int x_center; // the x of the center of the canvas
+int y_center; // the y of the center of the canvas
+int radius = 50; // radius of falling ball
+int speed = 5; // speed (i.e. movement each step)
+color red; // color of drawing
+int y;     // the changing y coordinate of ball
+
+void setup() // initialize drawing (at load)
+{ 
+  size(200,300); // set size of canvas
+  x_center = width/2; // compute center of canvas
+  y_center = height/2; 
+
+  red = color(255,0,0); // define red (using RGB)
+  frameRate(10); // draw() is called 10 times/sec
+
+  stroke(red); // set the 'pen' color to red
+  y = y_center; // init circle's y coordinate
+} 
+
+void draw() // called periodically
+{
+  background(0,0,0,0); // clear screen
+
+  y = y + speed; // compute new y coordinate
+  if(y &gt; height) // if outside canvas...</pre>
+<pre>    y = 0;       // ...move back to top
+
+  circle(x_center, y, radius); // draw circle
+}
+</pre>
+</div>
+</div>
+<br />
+To make things a little more interesting, consider another example: Create an animation where a line is formed of a fixed point on one end (at the center of the canvas) and a point that moves along a circle on the other side (think of the seconds hand in a clock). See the figure below:<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<img border="1" src="http://2.bp.blogspot.com/-g4Mt9DyeYNw/U4YuL2zHLbI/AAAAAAAAuFE/2HBcVMnnqDM/s1600/circle.png" height="200" style="border-color: blue;" width="200" />
+</div>
+<br />
+In this figure, note the following:<br />
+<ul>
+<li>Again, the canvas border is depicted in blue.</li>
+<li>The coordinate system starts from (0,0) - top left, as pointed by the light blue arrow).</li>
+<li>The canvas size is (width times height). Thus, the bottom right point is at (width, height).</li>
+<li>The canvas center is at point (width/2, height/2)</li>
+</ul>
+<div>
+<div class="separator" style="clear: both; text-align: center;">
+Next, note that the animation we want to achieve is for the red line 'r' to go around. I.e., the point 'p' should move along the circle. Thus, we should again point out that:</div>
+<br />
+<ul>
+<li>Point 'p' is always on the circumference of the circle. Thus, to emulate it going around the circumference we merely need to adjust the angle φ (phi).</li>
+<li>Assuming the radius of the circle is 'r', we can easily compute the values of 'x' and 'y' using the sine and cosine laws.</li>
+<li>Since cos(φ) = x / r, x can be easily computed as x = cos(φ) * r.</li>
+<li>Similarly, sin(φ) = y / r, thus y = sin(φ) * r.</li>
+</ul>
+<div>
+Now, consider the following example, that takes advantage of these and creates the desired animation:</div>
+<br />
+<div style="display: inline-block;">
+<a href="http://nearchos.aspectsense.com/js/circling_line.html" target="_blank">
+<img border="0" src="http://4.bp.blogspot.com/-7YiT_uks4L0/U4Y4NGBBiOI/AAAAAAAAuFU/edtUzW168Cw/s1600/circling_line.gif" />
+</a></div>
+<br />
+<div style="border: 1px dashed #bbb; height: 500px; margin-left: 220px; padding: 10px; width: 400px;">
+<pre>int x_center; // the x of the center of the canvas
+int y_center; // the y of the center of the canvas
+int radius = 50; // radius of falling ball
+int speed = 5; // speed (i.e. movement each step)
+color red; // color of drawing
+int y;     // the changing y coordinate of ball
+
+void setup() // initialize drawing (at load)
+{ 
+  size(200,300); // set size of canvas
+  x_center = width/2; // compute center of canvas
+  y_center = height/2; 
+
+  red = color(255,0,0); // define red (using RGB)
+  frameRate(10); // draw() is called 10 times/sec
+
+  stroke(red); // set the 'pen' color to red
+  y = y_center; // init circle's y coordinate
+} 
+
+void draw() // called periodically
+{
+  background(0,0,0,0); // clear screen
+
+  y = y + speed; // compute new y coordinate
+  if(y &gt; height) // if outside canvas...</pre>
+<pre>    y = 0;       // ...move back to top
+
+  circle(x_center, y, radius); // draw circle
+}
+</pre>
+</div>
+</div>
+<br />
