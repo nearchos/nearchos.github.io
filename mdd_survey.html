@@ -1,0 +1,443 @@
+<html>
+<head>
+<title>MDD Survey</title>
+</head>
+<body>
+<h1>Summary of the classroom-based survey: questions and answers</h1>
+
+<p>This document presents the results of a questionnaire which was filled in by the students of the EPL-429 course at the University of Cyprus. The students attended the course titled 'Context-aware Pervasive Systems' which included lab assignments during which the students were guided to develop context-aware applications using the methodology and the middleware presented in classroom.</p>
+
+<p>A subset of the students have also used an MDD-based approach for creating context plug-ins that they had previously developed manually (i.e., without the modeling tools).</p>
+
+<p>Parts A and B were answered by all 12 students. Parts C and D were only answered by the 4 students who received hands-on experience with the MDD-based approach. For sections A and B, the results of these 4 students are listed inside parentheses (i.e., 'Yes 10 (3)' means that 10 students in total answered 'Yes', 3 of whom also used the MDD approach). This separation is important as the feedback from these students was evidently more credible regarding the comparison of the manual development approach versus the MDD-based approach.
+
+<h2>1&nbsp;Participants' information</h2>
+
+<ul>
+<li> Number of participants: 12 (4)
+<li> Year of study: 4th (10) and 3rd (2)
+<li> Years of experience with programming: 3 to 4
+<li> Years of experience with Java programming: 1 to 4 (evenly distributed)
+<li> Experience with UML: Low to medium
+<li> Experience with other modeling languages: No
+<li> Experience with Model Driven Development: None to medium (some students used the Rational Rose tool as part of a software engineering class)
+</ul>
+
+<h2>2&nbsp;General questions</h2>
+
+<table border="1">
+	<tr>
+		<th>Question</th><th>Yes</th><th>Partially</th><th>No</th>
+	</tr>
+	<tr>
+		<td>A.1 - Was the concept of 'context aware' applications clear to you?</td>
+		<td>11 (4)</td>
+		<td>1 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>A.2 - Are the benefits of using the 'MUSIC Context Middleware' understandable to you?</td>
+		<td>9 (4)</td>
+		<td>3 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td colspan="4">A.3 - Are the following elements of the "MUSIC Context Middleware" clear to you?</td>
+	</tr>
+	<tr>
+		<td>- OSGi framework</td>
+		<td>10 (4)</td>
+		<td>2 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>- Context middleware</td>
+		<td>8 (4)</td>
+		<td>4 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>- Context plug-ins</td>
+		<td>9 (4)</td>
+		<td>3 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>- Model-driven Development tools</td>
+		<td>6 (3)</td>
+		<td>4 (1)</td>
+		<td>2 (0)</td>
+	</tr>
+	<tr>
+		<td>A.4 - Overall, if your job was to develop context-aware applications, would you use the MUSIC middleware?</td>
+		<td>5 (2)</td>
+		<td>6 (2)</td>
+		<td>1 (0)</td>
+	</tr>
+
+</table>
+
+<h2>3&nbsp;Manual implementation of context plug-ins</h2>
+
+<table border="1">
+	<tr>
+		<th colspan="4"><i>Preparation</i></th>
+	</tr>
+	<tr>
+		<th>Question</th><th colspan="3">Answers</th>
+	</tr>
+	<tr>
+		<th></th><th>High</th><th>Medium</th><th>Low</th>
+	</tr>
+	<tr>
+		<td>B.1 - Quality of lecture material</td>
+		<td>3 (2)</td>
+		<td>9 (2)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>B.2 - Quality of related tutorials</td>
+		<td>9 (4)</td>
+		<td>3 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>B.3 - Quality of additional preparation material (e.g. books, web-sites, etc)</td>
+		<td>5 (1)</td>
+		<td>5 (2)</td>
+		<td>2 (1)</td>
+	</tr>
+	<tr>
+		<td colspan="4">B.4 - Difficulty to understand the following concepts</td>
+	</tr>
+	<tr>
+		<td>- Identify the relevant context types</td>
+		<td>0 (0)</td>
+		<td>5 (2)</td>
+		<td>7 (2)</td>
+	</tr>
+	<tr>
+		<td>- Design the architecture of the plug-in</td>
+		<td>2 (0)</td>
+		<td>7 (2)</td>
+		<td>3 (2)</td>
+	</tr>
+	<tr>
+		<td>- Define the MANIFEST file</td>
+		<td>0 (0)</td>
+		<td>7 (1)</td>
+		<td>5 (3)</td>
+	</tr>
+	<tr>
+		<td>- Define the service descriptor (XML) file</td>
+		<td>1 (0)</td>
+		<td>8 (2)</td>
+		<td>3 (2)</td>
+	</tr>
+	<tr>
+		<td>- Define the context model</td>
+		<td>4 (0)</td>
+		<td>7 (3)</td>
+		<td>1 (1)</td>
+	</tr>
+	<tr>
+		<td>- Define the code of the plug-in</td>
+		<td>0 (0)</td>
+		<td>8 (3)</td>
+		<td>4 (1)</td>
+	</tr>
+	<tr>
+		<td>- Package the plug-in in an OSGi bundle</td>
+		<td>3 (0)</td>
+		<td>5 (1)</td>
+		<td>4 (3)</td>
+	</tr>
+	<tr>
+		<td>B.5 - Most difficult concepts (concept + reason)</td>
+		<td colspan="3">
+			<ul>
+				<li>Context Model (2),
+				<li>Plug-in code (1)
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>B.6 - Time for preparation (hours)</td>
+		<td colspan="3">Avg=22.8 (5.5), Med=20 (10), Min=1 (1), Max=48 (10)</td>
+	</tr>
+	<tr>
+		<td>B.7 - How much time was spent for implementation (hours)?</td>
+		<td colspan="3">19.6 (16.0)</td>
+	</tr>
+	<tr>
+		<td rowspan="2">B.8 - Have you succeeded to realize the plug-in?</td>
+		<th>Yes</th>
+		<th>No</th>
+		<td></td>
+	</tr>
+	<tr>
+		<td>12 (4)</td>
+		<td>0 (0)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>B.9 - How much time was required to understand the API (hours)?</td>
+		<td colspan="3">3.5 (2.3)</td>
+	</tr>
+	<tr>
+		<td rowspan="2">B.10 - How complex was the implementation?</td>
+		<th>High</th>
+		<th>Medium</th>
+		<th>Low</th>
+	</tr>
+	<tr>
+		<td>1 (0)</td>
+		<td>9 (2)</td>
+		<td>2 (2)</td>
+	</tr>
+	<tr>
+		<td>B.11 - Which steps have been the most difficult?</td>
+		<td colspan="3">
+			<ul>
+				<li>Understand and use the MUSIC API,
+				<li>Define the plug-in code,
+				<li>Install &amp; run plug-in,
+				<li>Manifest,
+				<li>Context model,
+				<li>Plug-in implementation,
+				<li>Package &amp; deploy
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2">B.12 - How much help was required from the lecturer?</td>
+		<th>Much</th>
+		<th>Some</th>
+		<th>Little</th>
+	</tr>
+	<tr>
+		<td>5 (2)</td>
+		<td>4 (0)</td>
+		<td>3 (2)</td>
+	</tr>
+	<tr>
+		<td>B.13 - For which steps was help required from the lecturer (step)?</td>
+		<td colspan="3">
+			<ul>
+				<li>Identify the relevant context types,
+				<li>Design the context model (3),
+				<li>Include needed libraries in plug-in,
+				<li>Design Manifest (2),
+				<li>Service descriptor,
+				<li>Package plug-in,
+				<li>Context model,
+				<li>Plug-in code
+			</ul>
+		</td>
+	</tr>
+</table>
+
+<h2>4&nbsp;Model-driven development of context plug-ins</h2>
+
+<table border="1">
+	<tr>
+		<th>Question</th><th colspan="3">Answers</th>
+	</tr>
+	<tr>
+		<th colspan="4"><i>Preparation</i></th>
+	</tr>
+	<tr>
+		<th></th><th>High</th><th>Medium</th><th>Low</th>
+	</tr>
+	<tr>
+		<td>C.1 - Quality of lecture material</td>
+		<td>6 (4)</td>
+		<td>6 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>C.2 - Quality of related tutorials</td>
+		<td>8 (4)</td>
+		<td>4 (0)</td>
+		<td>0 (0)</td>
+	</tr>
+	<tr>
+		<td>C.3 - Difficulty to understand the required concepts</td>
+		<td>1 (0)</td>
+		<td>7 (2)</td>
+		<td>3 (2)</td>
+	</tr>
+	<tr>
+		<td>C.4 - Additional preparation material (books, web, etc)</td>
+		<td colspan="3">Web</td>
+	</tr>
+	<tr>
+		<td>C.5 - Time for preparation</td>
+		<td colspan="3">(3.75)</td>
+	</tr>
+	<tr>
+		<th colspan="4"><i>Implementation</i></th>
+	</tr>
+	<tr>
+		<td>C.6 - How many hours were spent for implementation? <sup><a href="#fn1" id="ref1">1</a></sup></td>
+		<td colspan="3">(1)</td>
+	</tr>
+	<tr>
+		<td rowspan="2">C.7 - Have you succeeded to realize the Context Plug-in?</td>
+		<th>Yes</th>
+		<th>Partially</th>
+		<th>No</th>
+	</tr>
+	<tr>
+		<td>(4)</td>
+		<td>(0)</td>
+		<td>(0)</td>
+	</tr>
+	<tr>
+		<td>C.8 - How much time was required to understand the modeling concepts (hours)?</td>
+		<td colspan="3">(1.25)</td>
+	</tr>
+	<tr>
+		<td rowspan="2">C.9 - How complex was the implementation?</td>
+		<th>High</th>
+		<th>Medium</th>
+		<th>Low</th>
+	</tr>
+	<tr>
+		<td>(0)</td>
+		<td>(4)</td>
+		<td>(0)</td>
+	</tr>
+	<tr>
+		<td>C.10 - Which steps have been the most difficult?</td>
+		<td colspan="3">
+			<ul>
+				<li>Understand the concepts,
+				<li>Design the model (steep learning curve)
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2">C.11 - How much help was required from the lecturer?</td>
+		<th>Much</th>
+		<th>Some</th>
+		<th>None</th>
+	</tr>
+	<tr>
+		<td>(4)</td>
+		<td>(0)</td>
+		<td>(0)</td>
+	</tr>
+	<tr>
+		<td>C.12 - For which steps was help required from the lecturer?</td>
+		<td colspan="3">All</td>
+	</tr>
+</table>
+
+
+<h2>5&nbsp;Manual versus MDD-based implementation</h2>
+
+D.1 - Which development approach do you think is easier and why?
+<ul>
+<li> MDD because of high level abstractions
+<li> MDD is easier if you are familiar with the tool (faster development)
+<li> MDD because of many automations (MANIFEST, Service Descriptor, etc)
+<li> Once you get familiar with EA, the MDD approach is much easier (otherwise manual implementation is preferred)
+</ul>
+
+D.2 - Which development approach do you prefer and why?
+<ul>
+<li> MDD for abstractions and platform independence
+<li> I prefer the manual implementation because I am more familiar with it (but if I learned to use MDD then maybe I would change my mind)
+<li> Manual implementation because the MDD-approach requires that you know the tools very well in order to use it
+<li> MDD approach because it is easier (if you are familiar with the tool) and you save time
+</ul>
+
+D.3 - Would you apply the MDD approach if you had to develop another plug-in?
+<ul>
+<li> Yes (all 4 of them)
+</ul>
+
+D.4 - How could the manual implementation task be simplified?
+<ul>
+<li> Automatically generate MANIFEST and Service Descriptor
+<li> Automatic generation of standardized functionality
+</ul>
+
+D.5 - How could the MDD approach be improved?
+<ul>
+<li> Automatic generation of the general plug-in schema
+<li> Offer even more functionality
+</ul>
+
+D.6 - Pros and Cons of manual implementation:
+
+<table border="1">
+	<tr>
+		<th>Pros</th>
+		<th>Cons</th>
+	</tr>
+	<tr>
+		<td>Freedom of coding</td>
+		<td>Architectural (Platform) dependent</td>
+	</tr>
+	<tr>
+		<td>Easy and fast for experience programmers</td>
+		<td>More time to develop</td>
+	</tr>
+	<tr>
+		<td>Simple Java code programming</td>
+		<td>More time / More bugs</td>
+	</tr>
+	<tr>
+		<td>You have better control (of the code)</td>
+		<td>More time consuming</td>
+	</tr>
+	<tr>
+		<td>You better understand what you are doing</td>
+		<td></td>
+	</tr>
+</table>
+
+<br>
+
+D.7 - Pros and Cons of the MDD approach:
+
+<table border="1">
+	<tr>
+		<th>Pros</th>
+		<th>Cons</th>
+	</tr>
+	<tr>
+		<td>Architectural independence</td>
+		<td>Slow</td>
+	</tr>
+	<tr>
+		<td>Easy for newbies</td>
+		<td>You do not always understand what is happening behind the model</td>
+	</tr>
+	<tr>
+		<td>Easier way to build your plug-in</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Less bugs</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Automation of certain functionalities</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Time saving</td>
+		<td></td>
+	</tr>
+</table>
+
+<hr>
+<h2>Footnotes</h2>
+<sup id="fn1">1. For the students who did try the MDD approach, the time includes just the design of the UML model and the
+transformation to source code (additional steps required to implement missing pieces of code were ignored)</sup>
+
+</body>
+</html>
