@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="997ff72a-e232-4e06-aafe-a72f0c5a70e5" name="Changes" comment="Adding doi to EMCIS 2025 paper">
+    <list default="true" id="997ff72a-e232-4e06-aafe-a72f0c5a70e5" name="Changes" comment="Adding .idea files to version control">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/publications.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="145" />
+    <option name="cachedIndexableFilesCount" value="150" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -56,7 +57,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.google.cloudcode.ide_session_index": "20260415_0001",
+    "com.google.cloudcode.ide_session_index": "20260415_0004",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -107,7 +108,8 @@
       <workItem from="1771048476891" duration="1855000" />
       <workItem from="1771353714368" duration="217000" />
       <workItem from="1772868579631" duration="179000" />
-      <workItem from="1776254889542" duration="346000" />
+      <workItem from="1776254889542" duration="505000" />
+      <workItem from="1776255501180" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="Adding MoU with rTMS">
       <option name="closed" value="true" />
@@ -301,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776255136607</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Adding .idea files to version control">
+      <option name="closed" value="true" />
+      <created>1776255319761</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1776255319761</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +350,7 @@
     <MESSAGE value="Adding MDPI Informastion" />
     <MESSAGE value="Adding dataset to MDPI Information paper" />
     <MESSAGE value="Adding doi to EMCIS 2025 paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding doi to EMCIS 2025 paper" />
+    <MESSAGE value="Adding .idea files to version control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding .idea files to version control" />
   </component>
 </project>
